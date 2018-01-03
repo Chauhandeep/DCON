@@ -54,13 +54,14 @@ io.on('connection',(socket)=>{
 
   socket.on('verify',(params,callback)=>{
     var arr = array.filter((item)=>params.id==item.id&&params.otp==item.otp);
-    console.log(arr);
-    if(arr.length==='1')
+    var length = arr.length;
+    console.log(length);
+    if(length===1)
     {
-      callback(true);
+      callback(false);
     }
     else {
-      callback(false);
+      callback(true);
     }
   });
 

@@ -47,6 +47,6 @@ form.on('submit', function (e) {
 
   }
   else {
-    console.log('provide valid credentials');
+    jQuery('body').append('<p>provide valid credentials</p>');
   }
 });
