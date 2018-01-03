@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const emailExistence = require('email-existence');
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
