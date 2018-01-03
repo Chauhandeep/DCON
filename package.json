@@ -10,11 +10,13 @@
   "author": "Deepanshu Chauhan",
   "license": "ISC",
   "dependencies": {
-    "email-existence": "^0.1.5",
+    "body-parser": "^1.18.2",
     "express": "^4.14.0",
+    "express-validator": "^4.3.0",
     "hbs": "^4.0.1",
     "mongoose": "^5.0.0-rc0",
     "nodemailer": "^4.4.1",
+    "random-number": "0.0.9",
     "socket.io": "^1.4.8"
   }
 }

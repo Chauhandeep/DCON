@@ -10,8 +10,9 @@ var transporter = nodemailer.createTransport({
   tls: { rejectUnauthorized: false }
 });
 
-var verification =  (email,callback)=>{
+var verification =  (params,otp,callback)=>{
 
+  var email = params.email;
   emailExistence.check(email,(err,res)=>{
     if(err){
       return callback(false);
@@ -19,8 +20,8 @@ var verification =  (email,callback)=>{
     var mailOptions = {
       from: 'Deepanshu',
       to: email,
-      subject: 'Testing mail services',
-      text: 'Hey there'
+      subject: 'DCONNECT Account Verification',
+      html: `<p>Hello ${params.firstname},<br>OTP to verify your Account is <strong>${otp}</strong></p>`
     };
 
     transporter.sendMail(mailOptions, function(error, info){
