@@ -41,7 +41,7 @@ form.on('submit', function (e) {
              jQuery('body').append('<p>There was some Error</p>');
         }
         else{
-          window.location.replace(`/verify?id=${id}`);
+          window.location.href = (`/verify?id=${id}`);
         }
       });
 
